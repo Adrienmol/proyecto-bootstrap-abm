@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa Sapore</title>
+    <title>Villa Sapore - Restaurante Italiano</title>
     <!-- Link al favicon -->
     <link rel="icon" type="image/png" href="img/logo-minimal.png">
 
@@ -16,15 +17,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+
+
+    <!--Sobreescribir bootstrap-->
+    <style>
+        .bg-primary {
+            background-color: #986842 !important;
+        }
+
+        .bg-secondary {
+            background-color: #ede0c8 !important;
+        }
+
+        .btn-primary {
+            background-color: #986842 !important;
+            border: 1px solid #986842 !important;
+        }
+    </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="img/logo-minimal.png" alt="Villa Sapore Logo" width="70" height="70" class="d-inline-block align-center">
+                <img src="img/logo-minimal.png" alt="Villa Sapore Logo" width="70" height="70"
+                    class="d-inline-block align-center">
                 Villa Sapore
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,13 +68,77 @@
     </nav>
 
     <header>
-        <header class="hero-section text-white text-center py-5 bg-secondary" style="background-image: url(''); background-size: cover; background-position: center;">
-            <div class="container">
+        <header class="hero-section text-white text-center py-5 bg-secondary position-relative"
+            style="background-image: url('./img/prueba.jpg'); background-size: cover; background-position: center;">
+
+            <!-- Overlay artificial con la opacidad reducida -->
+            <div class="overlay position-absolute w-100 h-100"
+                style="background-color: rgba(0, 0, 0, 0.6); top: 0; left: 0;"></div>
+
+            <div class="container position-relative">
                 <h1 class="display-4">Bienvenidos a Villa Sapore</h1>
                 <p class="lead">Descubre la auténtica cocina italiana gourmet</p>
                 <a href="menu.html" class="btn btn-primary btn-lg">Ver Menú</a>
             </div>
         </header>
     </header>
+
+    <main>
+        <!--Introducción-->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <h2>Nuestra pasión por la cocina Italiana</h2>
+                        <p>En Villa Sapore, nos dedicamos a ofrecer la más exquisita experiencia culinaria italiana.
+                            Nuestros chefs expertos combinan ingredientes frescos y de alta calidad para crear platos
+                            que deleitan los sentidos y evocan los sabores auténticos de Italia.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="./img/interior.jpg" alt="" class="rounded img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Especialidades -->
+        <section class="py-5 bg-secondary">
+            <div class="container">
+                <h2 class="text-center mb-4">Nuestras Especialidades</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <img src="./img/pasta.jpg" class="card-img-top" alt="Pasta fresca">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pasta Fresca</h5>
+                                <p class="card-text flex-grow-1">Elaborada diariamente en nuestra cocina.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <img src="./img/pizza.jpg" class="card-img-top" alt="Pizza artesanal">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Pizza Artesanal</h5>
+                                <p class="card-text flex-grow-1">Horneada en nuestro horno de leña tradicional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <img src="./img/cannoli.jpg" class="card-img-top" alt="Cannoli">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Cannoli</h5>
+                                <p class="card-text flex-grow-1">Nuestro postre estrella, una receta familiar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
 </body>
+
 </html>
